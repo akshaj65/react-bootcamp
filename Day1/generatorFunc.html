@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body>
+    <script>
+        function posts(){
+            let arr= [1,2,3,4,5,6,7,8];
+            let page=0;
+             function* pagination() {
+                 yield arr[page++];
+               }
+            return pagination;
+        }
+        let myPosts = posts();
+        console.log(myPosts);
+        console.log(  myPosts().next().value);
+        console.log(  myPosts().next().value);
+        console.log(  myPosts().next().value);
+        console.log(  myPosts().next().value);
+    </script>
+</body>
+</html>

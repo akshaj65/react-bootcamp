@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+</head>
+<body>
+    <script>
+        //  IIFE (Immediately Invoked Function Expression) is a function that runs the moment it is invoked or called in the JavaScript event loop
+        (function name() {
+            console.log("name");
+        })()
+
+        // IIFE with closure
+       const greet= (function hello() {
+            let i=0;
+            return  function world() {
+                console.log("hello world" ,i++);
+            }
+        })();
+        greet();
+        greet();
+        greet();
+        greet();
+    </script>
+</body>
+</html>
